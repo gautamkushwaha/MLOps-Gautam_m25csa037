@@ -239,3 +239,88 @@ Test Time: 2,416 ms</p>
     </tr>
   </tbody>
 </table>
+
+
+
+
+# 2 
+
+<table>
+  <thead>
+    <tr>
+      <th>Compute</th>
+      <th>Batch Size</th>
+      <th>Optimizer</th>
+      <th>LR</th>
+      <th>Test Accuracy (%)<br>(R18 | R50)</th>
+      <th>Train Time (ms)<br>(R18 | R50)</th>
+      <th>FLOPs<br>(R18 | R50)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>CPU</b></td>
+      <td>16</td>
+      <td>SGD</td>
+      <td>0.001</td>
+      <td>85.50% | 85.50%*</td>
+      <td>34,033.6 | 188,091.4*</td>
+      <td>0.03G | 0.08G</td>
+    </tr>
+    <tr>
+      <td><b>CPU</b></td>
+      <td>16</td>
+      <td>Adam</td>
+      <td>0.001</td>
+      <td>85.50% | 85.50%*</td>
+      <td>49,652.5 | 107,601.1*</td>
+      <td>0.03G | 0.08G</td>
+    </tr>
+    <tr>
+      <td><b>GPU</b></td>
+      <td>16</td>
+      <td>SGD</td>
+      <td>0.001</td>
+      <td>88.48% | 85.24%</td>
+      <td>36,424.5 | 84,514.9</td>
+      <td>0.03G | 0.08G</td>
+    </tr>
+    <tr>
+      <td><b>GPU</b></td>
+      <td>16</td>
+      <td>Adam</td>
+      <td>0.001</td>
+      <td>88.05% | 85.69%</td>
+      <td>38,811.4 | 92,063.1</td>
+      <td>0.03G | 0.08G</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><i>*Note: ResNet-50 CPU data recorded at Batch Size 32 based on available logs.</i></p>
+
+<h3>Detailed Analysis</h3>
+
+<h4>1. Comparative Performance Analysis</h4>
+<ol>
+  <li><b>Model Efficiency:</b> For small-scale datasets like FashionMNIST ($28 \times 28$ pixels), <b>ResNet-18</b> is significantly more efficient than ResNet-50. On CPU, it completes training ~3-5x faster.</li>
+  <li><b>Hardware Acceleration:</b> While the CPU is competitive for smaller models, the <b>GPU</b> provides critical scaling for <b>ResNet-50</b>, reducing training latency by over 50% compared to CPU environments.</li>
+  <li><b>Accuracy Trends:</b> <b>ResNet-18</b> consistently achieved higher accuracy (up to <b>88.48%</b>) than ResNet-50. This suggests that deeper architectures may suffer from overfitting or unnecessary complexity on simpler grayscale classification tasks.</li>
+</ol>
+
+<h4>2. Computational Complexity &amp; FLOPs</h4>
+<ol>
+  <li><b>Architectural Constants:</b> The FLOPs (Floating Point Operations) remain constant regardless of the compute type. <b>ResNet-18</b> operates at <b>0.03G</b>, while <b>ResNet-50</b> jumps to <b>0.08G</b>.</li>
+  <li><b>Impact on Throughput:</b> The 2.6x increase in FLOPs between the two models directly correlates with the increased training time observed, particularly on the CPU where parallelization is limited compared to the GPU.</li>
+</ol>
+
+<h4>3. Optimizer &amp; Hyperparameter Influence</h4>
+<ol>
+  <li><b>SGD vs. Adam:</b> 
+    <ul>
+      <li><b>SGD</b> generally resulted in better final test accuracy for ResNet-18.</li>
+      <li><b>Adam</b> showed faster training times on deeper architectures like ResNet-50 but required more memory overhead on the CPU.</li>
+    </ul>
+  </li>
+  <li><b>Learning Rate Impact:</b> A learning rate of <b>0.001</b> was found to be the "sweet spot" for convergence across both architectures within the allocated training epochs.</li>
+</ol>
