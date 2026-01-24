@@ -1,43 +1,5 @@
 #MLOps_Gautam_m25csa037
 
-
-<style>
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 20px 0;
-  font-family: Arial, sans-serif;
-}
-
-th, td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: center;
-}
-
-th {
-  background-color: #4CAF50;
-  color: white;
-  font-weight: bold;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-tr:hover {
-  background-color: #ddd;
-}
-
-b {
-  color: #333;
-}
-
-span[style="color:red"] {
-  font-size: 0.8em;
-}
-</style>
-
 <table>
   <thead>
     <tr>
