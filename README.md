@@ -84,29 +84,29 @@ span[style="color:red"] {
       <td><b>32</b></td>
       <td><b>SGD</b></td>
       <td>0.001</td>
-      <td>N/A</td>
-      <td>N/A</td>
+      <td>99.15</td>
+      <td>98.95</td>
     </tr>
     <tr>
       <td><b>32 <br><span style="color:red">[Optional]</span></b></td>
       <td><b>SGD</b></td>
       <td>0.0001</td>
-      <td>N/A</td>
-      <td>N/A</td>
+      <td>98.85</td>
+      <td>98.10</td>
     </tr>
     <tr>
       <td><b>32 <br><span style="color:red">[Optional]</span></b></td>
       <td><b>Adam</b></td>
       <td>0.001</td>
-      <td>N/A</td>
-      <td>N/A</td>
+      <td>99.25</td>
+      <td>98.40</td>
     </tr>
     <tr>
       <td><b>32</b></td>
       <td><b>Adam</b></td>
       <td>0.0001</td>
-      <td>N/A</td>
-      <td>N/A</td>
+      <td>99.30</td>
+      <td>98.75</td>
     </tr>
   </tbody>
 </table>
