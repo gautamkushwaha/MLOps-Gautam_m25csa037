@@ -1,0 +1,5 @@
+Compute,Model,Optimizer,Learning Rate,Batch Size,Train Time (ms),Accuracy (%),FLOPs
+CPU,ResNet-18,SGD,0.001,16,34033.59,85.5,0.03G
+CPU,ResNet-18,Adam,0.001,16,49652.47,85.5,0.03G
+CPU,ResNet-50,SGD,0.001,32,188091.42,85.5,0.08G
+CPU,ResNet-50,Adam,0.001,32,107601.06,85.5,0.08G
