@@ -1,0 +1,5 @@
+data/
+setA/
+*.zip
+*.pth
+__pycache__/
