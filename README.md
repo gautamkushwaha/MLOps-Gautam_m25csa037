@@ -1,4 +1,5 @@
-# ResNet Docker Training (MLOps Assignment)
+## m25csa037
+# ResNet Docker Training (MLOps Minor_exam)
 
 ## Project Overview
 Training ResNet18 using Docker container with GPU acceleration.
