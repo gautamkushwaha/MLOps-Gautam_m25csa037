@@ -3,38 +3,24 @@
 ## Project Overview
 Training ResNet18 using Docker container with GPU acceleration.
 
----
-
-## Folder Structure
-
-resnet_docker/
-│
-├── train.py
-├── Dockerfile
-├── README.md
-└── data/train/
-
----
-
+----
 ## Build Docker Image
 
 ```bash
 docker build -t resnet-training:v1 .
-
+```
 ## Running container
-
+```bash
 docker run -it --rm \
 --gpus all \
 --shm-size=8g \
 -v $(pwd):/workspace \
 resnet-training:v1
-
+```
 
 ## 📊 Model Evaluation Results
 
 The trained ResNet-18 model was evaluated on the test dataset after loading the saved weights.
-
-✅ **Model Loaded Successfully**
 
 ---
 
@@ -42,7 +28,7 @@ The trained ResNet-18 model was evaluated on the test dataset after loading the 
 
 | Metric | Value |
 |-------|------|
-| Accuracy | **97.64%** |
+|overall  Accuracy | **97.64%** |
 | F1 Score | **0.9762** |
 
 ---
