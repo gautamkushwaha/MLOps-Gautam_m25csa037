@@ -1,0 +1,25 @@
+{
+  "roll_no": "M25CSA037",
+  "baseline": {
+    "bleu": 55.99,
+    "final_loss": 0.0598,
+    "epochs": 100,
+    "time_minutes": 37.8
+  },
+  "tuned": {
+    "bleu": 62.3,
+    "final_loss": 0.3,
+    "epochs": 30,
+    "time_minutes": 8.2
+  },
+  "best_hyperparams": {
+    "num_epochs": 30,
+    "lr": 0.00022424170055512305,
+    "batch_size": 128,
+    "num_heads": 4,
+    "d_ff": 1024,
+    "dropout": 0.16559145705978015,
+    "num_layers": 6,
+    "warmup_epochs": 2
+  }
+}

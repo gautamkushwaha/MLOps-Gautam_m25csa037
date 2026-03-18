@@ -1,0 +1,10 @@
+{
+  "num_epochs": 30,
+  "lr": 0.00022424170055512305,
+  "batch_size": 128,
+  "num_heads": 4,
+  "d_ff": 1024,
+  "dropout": 0.16559145705978015,
+  "num_layers": 6,
+  "warmup_epochs": 2
+}
