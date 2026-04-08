@@ -1,0 +1,60 @@
+# --- Python / Environment ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+.env
+
+# --- Machine Learning Frameworks ---
+# PyTorch and Lightning logs
+lightning_logs/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+
+# --- LoRA Specifics ---
+# Ignore the large base models (keep the adapters if they are small)
+models/base_models/
+/checkpoints/
+/outputs/
+/lora_weights/
+# Uncomment below if you want to exclude all adapters too
+# *adapter_model.bin
+# *adapter_config.json
+
+# --- Adversarial Attack Specifics ---
+# Perturbation masks and adversarial examples (often large .npy or .pt files)
+/adv_examples/
+/perturbations/
+/noise_masks/
+*.npy
+*.npz
+
+# --- Datasets ---
+# Never commit your raw data
+data/
+datasets/
+*.csv
+*.jsonl
+*.h5
+
+# --- Experiment Tracking & Logs ---
+# Tensorboard, WandB, and local logs
+runs/
+wandb/
+*.log
+.pstats
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints
+*-checkpoint.py
+
+# --- OS / Misc ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
