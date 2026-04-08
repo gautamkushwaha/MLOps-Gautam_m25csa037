@@ -1,3 +1,4 @@
+
 # Assignment 5 - Deep Learning Operations
 ## ViT Fine-tuning with LoRA & Adversarial Attacks
 
@@ -85,7 +86,7 @@ pip install torch==2.1.0 torchvision==0.16.0 timm==0.9.12 peft==0.7.1 wandb==0.1
 
 #### 📈 Training Graphs
 All training graphs, loss curves and accuracy plots are available on WandB:
-👉 https://wandb.ai/kunalmishra8765-indian-institute-of-technology-jodhpur/DLops-Assignment-5
+👉 https://wandb.ai/m25csa037-iit-jodhpur/DLops-Assignment-5
 
 
 ### Train without LoRA:
@@ -265,16 +266,16 @@ All training graphs, loss curves and accuracy plots are available on WandB:
 
 | Model | Size | Location |
 |-------|------|----------|
-| Best Q1 (LoRA Rank=8, Alpha=8) | >25MB | 🤗 HuggingFace: Q1/best_model_lora_r8_a8.pth |
-| Q2 ResNet18 Clean | >25MB | 🤗 HuggingFace: Q2/resnet18_clean.pth |
-| Q2 PGD Detector | >25MB | HuggingFace: Q2/detector_pgd.pth |
-| Q2 BIM Detector | >25MB | HuggingFace: Q2/detector_bim.pth |
+| Best Q1 (LoRA Rank=8, Alpha=8) | >25MB | 🤗 HuggingFace: /best_model_lora_r8_a8.pth |
+| Q2 ResNet18 Clean | >25MB | 🤗 HuggingFace: /resnet18_clean.pth |
+| Q2 PGD Detector | >25MB | HuggingFace: /detector_pgd.pth |
+| Q2 BIM Detector | >25MB | HuggingFace: /detector_bim.pth |
 
 
-🤗 **HuggingFace Repository:** https://huggingface.co/101bytespeedkunal/dlops-assignment5-models
+🤗 **HuggingFace Repository:** https://huggingface.co/Gautam20/Assignment_5_mlops/tree/main
 | Model | Location |
 |-------|----------|
-| Best Q1 (LoRA Rank=8, Alpha=8) | 🤗 HuggingFace: Q1/best_model_lora_r8_a8.pth |
-| Q2 ResNet18 Clean | 🤗 HuggingFace: Q2/resnet18_clean.pth |
-| Q2 PGD Detector | GitHub: Q2/detector_pgd.pth |
-| Q2 BIM Detector | GitHub: Q2/detector_bim.pth |
+| Best Q1 (LoRA Rank=8, Alpha=8) | 🤗 HuggingFace: /best_model_lora_r8_a8.pth |
+| Q2 ResNet18 Clean | 🤗 HuggingFace: /resnet18_clean.pth |
+| Q2 PGD Detector |  HuggingFace: /detector_pgd.pth |
+| Q2 BIM Detector |  HuggingFace: /detector_bim.pth |
