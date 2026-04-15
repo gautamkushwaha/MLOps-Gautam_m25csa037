@@ -57,4 +57,5 @@ wandb/
 .DS_Store
 Thumbs.db
 .vscode/
-.idea/
+.idea/venv/
+.DS_Store
