@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLOps Portfolio | Gautam Kumar Kushwaha</title>
+    <style>
+        :root {
+            /* NEW COLOR PALETTE - EMERALD & GUNMETAL */
+            --bg-color: #171717;              /* Warmer neutral dark */
+            --card-bg: rgba(39, 39, 42, 0.8); /* Warmer gray-card */
+            --text-primary: #fafafa;           /* Very light gray */
+            --text-secondary: #a1a1aa;         /* Cool gray-secondary */
+            
+            --accent-color: #10b981;           /* Emerald Green */
+            --accent-gradient: linear-gradient(135deg, #10b981 0%, #14b8a6 100%); /* Emerald to Teal */
+            
+            --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            /* Updated Background Glows to use new Emerald accent */
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(20, 184, 166, 0.08) 0%, transparent 40%);
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            letter-spacing: -0.05em;
+        }
+
+        .profile-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            flex-wrap: wrap;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: var(--glass-border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            animation: fadeInUp 0.8s ease-out backwards;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            /* Updated Hover Border Color */
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            /* Updated Tag Background */
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent-color);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            width: fit-content;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent-gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: opacity 0.2s ease;
+        }
+
+        /* Utility classes to replace inline styles */
+        .section-title {
+            margin-bottom: 2rem;
+            font-weight: 300;
+            color: var(--text-secondary);
+        }
+        .muted {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        .note {
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .profile-info { flex-direction: column; gap: 0.5rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Gautam Kushwaha</h1>
+            <div class="profile-info">
+                <div class="profile-item">
+                    <span>🎓 M25CSA037</span>
+                </div>
+                <div class="profile-item">
+                    <span>✉️ m25csa037@iitj.ac.in</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="assignments">
+            <h2 class="section-title">Course Portfolio</h2>
+
+            <div class="grid">
+                <article class="card">
+                    <span class="tag">Assignment 1</span>
+                    <h2>ResNet & SVM Analysis</h2>
+                    <p class="muted">Hyperparameter Tuning for ResNet-18/50 and SVMs on MNIST/FashionMNIST datasets.</p>
+                    <a href="https://github.com/gautamkushwaha/MLOps-Gautam_m25csa037/tree/Assignment_1" target="_blank" class="btn">View Branch</a>
+                </article>
+
+                <article class="card">
+                    <span class="tag">Assignment 2</span>
+                    <h2>Data Contracts & Quality</h2>
+                    <p class="muted">Implemented YAML Data Contracts for Ride-Share, E-commerce, IoT, and FinTech scenarios.</p>
+                    <p class="note">*Submitted via Google Classroom</p>
+                </article>
+
+                <article class="card">
+                    <span class="tag">Assignment 3</span>
+                    <h2>HuggingFace & Docker</h2>
+                    <p class="muted">Fine-tuned DistilBERT for genre classification and containerized with Docker.</p>
+                    <a href="https://github.com/gautamkushwaha/MLOps-Gautam_m25csa037/tree/Assignment-2" target="_blank" class="btn">View Branch</a>
+                </article>
+
+                <article class="card">
+                    <span class="tag">Assignment 4</span>
+                    <h2>Transformer Optimization</h2>
+                    <p class="muted">English-Hindi translation using Ray Tune (Optuna + ASHA) for hyperparameter optimization.</p>
+                    <a href="https://github.com/gautamkushwaha/MLOps-Gautam_m25csa037/tree/Assignment_4" target="_blank" class="btn">View Branch</a>
+                </article>
+
+                <article class="card">
+                    <span class="tag">Assignment 5</span>
+                    <h2>ViT-LoRA & Robustness</h2>
+                    <p class="muted">PEFT/LoRA fine-tuning on ViT and adversarial evaluation using IBM ART.</p>
+                    <a href="https://github.com/gautamkushwaha/MLOps-Gautam_m25csa037/tree/Assignment_5" target="_blank" class="btn">View Branch</a>
+                </article>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
