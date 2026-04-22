@@ -1,0 +1,12 @@
+diffusers 
+transformers
+accelerate
+diffusers
+peft
+datasets
+torch
+onnx 
+onnxruntime 
+optimum[intel]
+tqdm
+matplotlib
